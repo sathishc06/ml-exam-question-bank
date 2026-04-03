@@ -1,0 +1,156 @@
+[
+  {
+    "id": "LR-001",
+    "topic": "linear_regression",
+    "type": "MCQ",
+    "difficulty": "easy",
+    "question": "What type of output does Linear Regression predict?",
+    "options": ["A category", "A probability", "A continuous number", "A cluster label"],
+    "answer": "A continuous number",
+    "explanation": "Linear Regression predicts a continuous numerical value such as price, temperature, or blood pressure. For categories, use Logistic Regression or Decision Trees."
+  },
+  {
+    "id": "LR-002",
+    "topic": "linear_regression",
+    "type": "MCQ",
+    "difficulty": "easy",
+    "question": "What is the equation for Simple Linear Regression?",
+    "options": ["y = mx + b", "y = 1/(1+e^-z)", "y = Σ xi*wi", "y = x^2 + b"],
+    "answer": "y = mx + b",
+    "explanation": "Simple Linear Regression uses y = mx + b where m is the slope, x is the input feature, and b is the y-intercept (bias)."
+  },
+  {
+    "id": "LR-003",
+    "topic": "linear_regression",
+    "type": "MCQ",
+    "difficulty": "easy",
+    "question": "In the equation y = mx + b, what does 'b' represent?",
+    "options": ["Slope", "Y-intercept (Bias)", "Input feature", "Output value"],
+    "answer": "Y-intercept (Bias)",
+    "explanation": "In y = mx + b, 'b' is the Y-intercept or bias term — the predicted value of y when x = 0. It is the starting point of the regression line."
+  },
+  {
+    "id": "LR-004",
+    "topic": "linear_regression",
+    "type": "MCQ",
+    "difficulty": "medium",
+    "question": "Which cost function does Linear Regression minimize?",
+    "options": ["Log Loss", "Mean Squared Error (MSE)", "Hinge Loss", "Cross-Entropy"],
+    "answer": "Mean Squared Error (MSE)",
+    "explanation": "Linear Regression minimizes MSE = (1/n) × Σ(yᵢ - ŷᵢ)². The squared term penalizes larger errors more heavily."
+  },
+  {
+    "id": "LR-005",
+    "topic": "linear_regression",
+    "type": "MCQ",
+    "difficulty": "medium",
+    "question": "What does R² (R-squared) measure in Linear Regression?",
+    "options": ["Error of the model", "Proportion of variance explained by the model", "Number of features", "Speed of convergence"],
+    "answer": "Proportion of variance explained by the model",
+    "explanation": "R² ranges from 0 to 1. R²=1 means the model perfectly explains all variance. R²=0.85 means the model explains 85% of the variation in the output."
+  },
+  {
+    "id": "LR-006",
+    "topic": "linear_regression",
+    "type": "MCQ",
+    "difficulty": "medium",
+    "question": "What algorithm is used to minimize the cost function in Linear Regression?",
+    "options": ["K-Means", "Gradient Descent", "Backpropagation", "Naive Bayes"],
+    "answer": "Gradient Descent",
+    "explanation": "Gradient Descent iteratively updates model parameters (m, b) by moving in the direction of steepest descent of the cost function to find the minimum."
+  },
+  {
+    "id": "LR-007",
+    "topic": "linear_regression",
+    "type": "MCQ",
+    "difficulty": "medium",
+    "question": "Which metric has the SAME unit as the target variable?",
+    "options": ["MSE", "RMSE", "R²", "All of the above"],
+    "answer": "RMSE",
+    "explanation": "RMSE (Root Mean Squared Error) = √MSE. Taking the square root converts the unit back to the same scale as the target variable, making it easier to interpret."
+  },
+  {
+    "id": "LR-008",
+    "topic": "linear_regression",
+    "type": "MCQ",
+    "difficulty": "hard",
+    "question": "Multiple Linear Regression with 3 features uses which equation?",
+    "options": ["y = mx + b", "y = b0 + b1x1 + b2x2 + b3x3", "y = 1/(1+e^-z)", "y = Gini impurity"],
+    "answer": "y = b0 + b1x1 + b2x2 + b3x3",
+    "explanation": "Multiple Linear Regression: y = b0 + b1x1 + b2x2 + b3x3 where b0 is intercept and b1,b2,b3 are coefficients for each feature x1,x2,x3."
+  },
+  {
+    "id": "LR-009",
+    "topic": "linear_regression",
+    "type": "MCQ",
+    "difficulty": "hard",
+    "question": "What problem occurs when two or more features are highly correlated in Multiple Linear Regression?",
+    "options": ["Overfitting", "Underfitting", "Multicollinearity", "Bias-Variance Tradeoff"],
+    "answer": "Multicollinearity",
+    "explanation": "Multicollinearity occurs when independent variables are highly correlated, making it difficult to determine the individual effect of each feature on the output."
+  },
+  {
+    "id": "LR-010",
+    "topic": "linear_regression",
+    "type": "MCQ",
+    "difficulty": "hard",
+    "question": "The learning rate alpha (α) in Gradient Descent controls:",
+    "options": ["Number of features", "Step size while descending the cost function", "Number of training samples", "Depth of the model"],
+    "answer": "Step size while descending the cost function",
+    "explanation": "Alpha (α) controls how large each step is down the cost function slope. Too large: overshoots minimum. Too small: very slow convergence. Must be tuned carefully."
+  },
+  {
+    "id": "LR-011",
+    "topic": "linear_regression",
+    "type": "TrueFalse",
+    "difficulty": "easy",
+    "question": "Linear Regression can be used for classification tasks.",
+    "answer": "False",
+    "explanation": "Linear Regression predicts continuous values, not categories. For classification (YES/NO, categories), use Logistic Regression or Decision Trees."
+  },
+  {
+    "id": "LR-012",
+    "topic": "linear_regression",
+    "type": "TrueFalse",
+    "difficulty": "easy",
+    "question": "A lower MSE value indicates a better Linear Regression model.",
+    "answer": "True",
+    "explanation": "MSE measures prediction error. Lower MSE means the predictions are closer to actual values, indicating a better model."
+  },
+  {
+    "id": "LR-013",
+    "topic": "linear_regression",
+    "type": "TrueFalse",
+    "difficulty": "medium",
+    "question": "R² value of 1.0 means the model perfectly fits the training data.",
+    "answer": "True",
+    "explanation": "R²=1 means 100% of variance is explained by the model. However, this may indicate overfitting if achieved on training data but not on test data."
+  },
+  {
+    "id": "LR-014",
+    "topic": "linear_regression",
+    "type": "ShortAnswer",
+    "difficulty": "easy",
+    "question": "What does MSE stand for and how is it calculated?",
+    "answer": "MSE stands for Mean Squared Error. It is calculated as: MSE = (1/n) × Σ(yᵢ - ŷᵢ)² where yᵢ is the actual value, ŷᵢ is the predicted value, and n is the total number of samples.",
+    "explanation": "MSE averages the squared differences between actual and predicted values. Squaring penalizes large errors more than small ones."
+  },
+  {
+    "id": "LR-015",
+    "topic": "linear_regression",
+    "type": "ShortAnswer",
+    "difficulty": "medium",
+    "question": "Explain the difference between Simple and Multiple Linear Regression with an example from healthcare.",
+    "answer": "Simple Linear Regression uses ONE input feature to predict the output. Example: Predict blood pressure from BMI only. Multiple Linear Regression uses TWO OR MORE input features. Example: Predict blood pressure from BMI, age, glucose level, and smoking status simultaneously. Multiple LR generally gives better predictions because it considers more factors.",
+    "explanation": "Adding more relevant features usually improves the model's accuracy as it captures more information about the patient."
+  },
+  {
+    "id": "LR-016",
+    "topic": "linear_regression",
+    "type": "ShortAnswer",
+    "difficulty": "hard",
+    "question": "What is the Bias-Variance Tradeoff in Machine Learning? How does it relate to Linear Regression?",
+    "answer": "Bias is the error from wrong assumptions — a high-bias model is too simple (underfitting). Variance is the error from sensitivity to training data fluctuations — a high-variance model is too complex (overfitting). In Linear Regression: A linear model on non-linear data has high bias (underfitting). A very complex polynomial regression has high variance (overfitting). The goal is to find the sweet spot with low bias AND low variance.",
+    "explanation": "The tradeoff is fundamental to all ML algorithms. Regularization techniques like Ridge and Lasso help manage this tradeoff in regression."
+  }
+]

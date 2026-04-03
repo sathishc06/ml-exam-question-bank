@@ -1,0 +1,234 @@
+[
+  {
+    "id": "KM-001",
+    "topic": "kmeans_clustering",
+    "type": "MCQ",
+    "difficulty": "easy",
+    "question": "K-Means Clustering belongs to which category of Machine Learning?",
+    "options": ["Supervised Learning", "Unsupervised Learning", "Reinforcement Learning", "Semi-supervised Learning"],
+    "answer": "Unsupervised Learning",
+    "explanation": "K-Means is Unsupervised because it works on unlabelled data — no predefined categories or target variable. The algorithm discovers hidden groupings on its own without any teacher."
+  },
+  {
+    "id": "KM-002",
+    "topic": "kmeans_clustering",
+    "type": "MCQ",
+    "difficulty": "easy",
+    "question": "What does 'K' represent in K-Means Clustering?",
+    "options": ["Number of features", "Number of clusters (groups)", "Number of data points", "Number of iterations"],
+    "answer": "Number of clusters (groups)",
+    "explanation": "K is the number of clusters you want the algorithm to find. You must choose K before running the algorithm. For example, K=3 means group all patients into 3 risk categories."
+  },
+  {
+    "id": "KM-003",
+    "topic": "kmeans_clustering",
+    "type": "MCQ",
+    "difficulty": "easy",
+    "question": "What is a Centroid in K-Means Clustering?",
+    "options": ["The outermost data point", "The center point of a cluster", "The largest value in a cluster", "The first data point chosen"],
+    "answer": "The center point of a cluster",
+    "explanation": "A centroid is the mean (average) position of all data points in a cluster. K-Means iteratively moves centroids until they stabilize at the true center of each cluster."
+  },
+  {
+    "id": "KM-004",
+    "topic": "kmeans_clustering",
+    "type": "MCQ",
+    "difficulty": "medium",
+    "question": "Which distance formula does K-Means use to assign points to clusters?",
+    "options": ["Manhattan Distance", "Euclidean Distance", "Cosine Similarity", "Hamming Distance"],
+    "answer": "Euclidean Distance",
+    "explanation": "K-Means uses Euclidean Distance: d = √[(x₂-x₁)² + (y₂-y₁)²]. Each data point is assigned to the cluster whose centroid is closest in Euclidean space."
+  },
+  {
+    "id": "KM-005",
+    "topic": "kmeans_clustering",
+    "type": "MCQ",
+    "difficulty": "medium",
+    "question": "What is the correct order of steps in the K-Means algorithm?",
+    "options": [
+      "Assign → Initialize → Update → Repeat",
+      "Initialize centroids → Assign points → Update centroids → Repeat",
+      "Update centroids → Assign points → Initialize → Repeat",
+      "Assign points → Initialize → Repeat → Update"
+    ],
+    "answer": "Initialize centroids → Assign points → Update centroids → Repeat",
+    "explanation": "Step 1: Place K centroids randomly. Step 2: Assign each data point to the nearest centroid. Step 3: Recalculate centroid as mean of all assigned points. Step 4: Repeat steps 2-3 until centroids stop moving (convergence)."
+  },
+  {
+    "id": "KM-006",
+    "topic": "kmeans_clustering",
+    "type": "MCQ",
+    "difficulty": "medium",
+    "question": "What does WCSS stand for and what does it measure?",
+    "options": [
+      "Within-Cluster Sum of Squares — measures cluster tightness",
+      "Weighted Cluster Standard Score — measures accuracy",
+      "Within-Class Standard Score — measures distance between clusters",
+      "Weighted Centroid Sum Score — measures model accuracy"
+    ],
+    "answer": "Within-Cluster Sum of Squares — measures cluster tightness",
+    "explanation": "WCSS = sum of squared distances from each point to its cluster centroid. Lower WCSS means tighter, more compact clusters. Used in the Elbow Method to find optimal K."
+  },
+  {
+    "id": "KM-007",
+    "topic": "kmeans_clustering",
+    "type": "MCQ",
+    "difficulty": "medium",
+    "question": "What is the Elbow Method used for in K-Means?",
+    "options": [
+      "To update centroids faster",
+      "To find the optimal value of K",
+      "To remove outliers from data",
+      "To scale features before clustering"
+    ],
+    "answer": "To find the optimal value of K",
+    "explanation": "Plot WCSS vs K. As K increases, WCSS decreases. The 'elbow' is where WCSS drops sharply then flattens. This elbow point represents the optimal K — adding more clusters beyond this gives diminishing returns."
+  },
+  {
+    "id": "KM-008",
+    "topic": "kmeans_clustering",
+    "type": "MCQ",
+    "difficulty": "hard",
+    "question": "What is the Silhouette Score and what is its range?",
+    "options": [
+      "Measures cluster overlap; range 0 to 100",
+      "Measures how similar a point is to its cluster vs others; range -1 to +1",
+      "Measures WCSS improvement; range 0 to 1",
+      "Measures centroid stability; range 0 to infinity"
+    ],
+    "answer": "Measures how similar a point is to its cluster vs others; range -1 to +1",
+    "explanation": "Silhouette Score = (b - a) / max(a, b) where a = mean distance to same cluster, b = mean distance to nearest other cluster. Score near +1 = well-clustered. Score near 0 = overlapping. Score near -1 = wrongly assigned."
+  },
+  {
+    "id": "KM-009",
+    "topic": "kmeans_clustering",
+    "type": "MCQ",
+    "difficulty": "hard",
+    "question": "What is the main advantage of K-Means++ over standard K-Means?",
+    "options": [
+      "It does not require choosing K",
+      "It uses smarter centroid initialization to avoid poor clustering",
+      "It handles categorical data better",
+      "It is faster than standard K-Means"
+    ],
+    "answer": "It uses smarter centroid initialization to avoid poor clustering",
+    "explanation": "Standard K-Means places centroids randomly which can lead to poor final clusters. K-Means++ chooses initial centroids far apart from each other, giving better and more consistent results. This is the default in scikit-learn."
+  },
+  {
+    "id": "KM-010",
+    "topic": "kmeans_clustering",
+    "type": "MCQ",
+    "difficulty": "hard",
+    "question": "K-Means fails to work well when clusters are:",
+    "options": [
+      "Spherical and well-separated",
+      "Of equal size",
+      "Non-spherical (e.g., crescent or ring shaped)",
+      "Containing many data points"
+    ],
+    "answer": "Non-spherical (e.g., crescent or ring shaped)",
+    "explanation": "K-Means assumes clusters are spherical (circular) because it uses Euclidean distance from a single centroid. It fails on elongated, crescent, or ring-shaped clusters. DBSCAN is better for such cases."
+  },
+  {
+    "id": "KM-011",
+    "topic": "kmeans_clustering",
+    "type": "TrueFalse",
+    "difficulty": "easy",
+    "question": "K-Means Clustering requires labelled training data.",
+    "answer": "False",
+    "explanation": "K-Means is an Unsupervised algorithm. It works on completely unlabelled data. It discovers natural groupings without any predefined categories or target variable."
+  },
+  {
+    "id": "KM-012",
+    "topic": "kmeans_clustering",
+    "type": "TrueFalse",
+    "difficulty": "easy",
+    "question": "Feature scaling (normalization) is important before running K-Means.",
+    "answer": "True",
+    "explanation": "K-Means uses Euclidean distance. If one feature (e.g., income in lakhs) has much larger values than another (e.g., age in years), the larger feature dominates the distance calculation. Scaling ensures all features contribute equally."
+  },
+  {
+    "id": "KM-013",
+    "topic": "kmeans_clustering",
+    "type": "TrueFalse",
+    "difficulty": "medium",
+    "question": "K-Means always produces the same clustering result for the same dataset.",
+    "answer": "False",
+    "explanation": "K-Means uses random centroid initialization. Different random starts can lead to different final clusters. To get reproducible results, set random_state parameter in scikit-learn. K-Means++ reduces (but does not eliminate) this variability."
+  },
+  {
+    "id": "KM-014",
+    "topic": "kmeans_clustering",
+    "type": "TrueFalse",
+    "difficulty": "medium",
+    "question": "Increasing K always improves K-Means clustering quality.",
+    "answer": "False",
+    "explanation": "Increasing K reduces WCSS but can lead to overfitting — creating too many small meaningless clusters. The Elbow Method helps find the right K where quality peaks without over-clustering."
+  },
+  {
+    "id": "KM-015",
+    "topic": "kmeans_clustering",
+    "type": "ShortAnswer",
+    "difficulty": "easy",
+    "question": "Explain the K-Means algorithm step-by-step with a simple medical example.",
+    "answer": "K-Means algorithm steps (K=3, Patient Risk Grouping): Step 1 — Initialize: Randomly place 3 centroids in the patient data space (Glucose, BMI features). Step 2 — Assign: Calculate Euclidean distance from each patient to all 3 centroids. Assign patient to the nearest centroid. Step 3 — Update: Recalculate each centroid as the mean of all patients assigned to it. Step 4 — Repeat: Repeat steps 2-3 until centroids stop moving. Result: Cluster 1 = Low Risk (Low glucose, Low BMI), Cluster 2 = Medium Risk, Cluster 3 = High Risk (High glucose, High BMI).",
+    "explanation": "This step-by-step process is iterative — each iteration moves centroids closer to the true center of natural groups in the data."
+  },
+  {
+    "id": "KM-016",
+    "topic": "kmeans_clustering",
+    "type": "ShortAnswer",
+    "difficulty": "medium",
+    "question": "What are the limitations of K-Means? How would you overcome them?",
+    "answer": "Limitations: 1) Must choose K in advance — use Elbow Method or Silhouette Score to find best K. 2) Sensitive to random initialization — use K-Means++ for smarter initialization. 3) Assumes spherical clusters — fails on ring/crescent shapes. Use DBSCAN instead. 4) Sensitive to outliers — single extreme value shifts centroid. Remove outliers before clustering. 5) Features must be scaled — use StandardScaler before running K-Means. 6) Only works on numerical data — encode categorical variables first.",
+    "explanation": "Understanding limitations helps choose the right algorithm. For medical data with outliers, pre-process carefully before K-Means."
+  },
+  {
+    "id": "KM-017",
+    "topic": "kmeans_clustering",
+    "type": "ShortAnswer",
+    "difficulty": "hard",
+    "question": "A hospital wants to group 500 patients into risk categories using Glucose, BMI, Age and Blood Pressure. Describe the complete K-Means workflow.",
+    "answer": "Complete workflow: 1) Data Collection — Load patient data with features: Glucose, BMI, Age, BloodPressure. 2) Preprocessing — Replace zero values (medically invalid) with column mean. Apply StandardScaler to normalize all features. 3) Find Optimal K — Plot Elbow curve (WCSS vs K=2 to 8). Choose K where curve bends (typically K=3 for risk groups). 4) Run K-Means — KMeans(n_clusters=3, random_state=42, init='k-means++'). 5) Interpret Clusters — Cluster 0: Low Glucose, Low BMI → Low Risk. Cluster 1: Medium values → Pre-diabetic/Medium Risk. Cluster 2: High Glucose, High BMI → High Risk/Diabetic. 6) Evaluate — Calculate Silhouette Score (>0.5 is good). 7) Clinical Use — Assign treatment protocols per cluster.",
+    "explanation": "This is a complete clinical decision support workflow. K-Means enables personalized medicine by automatically segmenting patients."
+  },
+  {
+    "id": "KM-018",
+    "topic": "kmeans_clustering",
+    "type": "MCQ",
+    "difficulty": "easy",
+    "question": "K-Means Clustering can be used for which of the following tasks?",
+    "options": [
+      "Predicting if a patient is diabetic",
+      "Grouping patients by similar health features",
+      "Predicting blood pressure value",
+      "Classifying tumour as malignant or benign"
+    ],
+    "answer": "Grouping patients by similar health features",
+    "explanation": "K-Means is used for grouping/segmentation. It does NOT predict a label or a number. It finds natural groups in unlabelled data — like grouping patients by health similarity."
+  },
+  {
+    "id": "KM-019",
+    "topic": "kmeans_clustering",
+    "type": "MCQ",
+    "difficulty": "medium",
+    "question": "When does K-Means algorithm stop (convergence)?",
+    "options": [
+      "After a fixed 100 iterations always",
+      "When centroids stop moving between iterations",
+      "When all WCSS values reach zero",
+      "When every cluster has equal number of points"
+    ],
+    "answer": "When centroids stop moving between iterations",
+    "explanation": "Convergence occurs when the centroid positions no longer change after the assign and update steps. This means each data point is staying in the same cluster — the algorithm has found a stable solution."
+  },
+  {
+    "id": "KM-020",
+    "topic": "kmeans_clustering",
+    "type": "ShortAnswer",
+    "difficulty": "medium",
+    "question": "Compare K-Means Clustering with Decision Trees. When would you choose one over the other?",
+    "answer": "K-Means Clustering: Unsupervised, no labels needed, output is cluster group IDs, used for patient segmentation, customer grouping. Decision Trees: Supervised, needs labelled data, output is a predicted class or rule, used for diagnosis (Disease/Healthy). Choose K-Means when: You have no labels and want to discover natural groups. Choose Decision Trees when: You have labelled data and want to classify new data points. Medical example — K-Means: Group 500 patients by health features to find natural risk groups. Decision Tree: Train on 300 labelled patients to diagnose new patient as Diabetic/Not.",
+    "explanation": "The key distinction is supervised vs unsupervised. Both are useful in healthcare for different tasks."
+  }
+]

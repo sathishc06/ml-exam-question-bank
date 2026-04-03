@@ -1,0 +1,224 @@
+[
+  {
+    "id": "NN-001",
+    "topic": "neural_networks",
+    "type": "MCQ",
+    "difficulty": "easy",
+    "question": "What is a Neural Network inspired by?",
+    "options": ["Computer processors", "The human brain and biological neurons", "Statistical equations", "Database systems"],
+    "answer": "The human brain and biological neurons",
+    "explanation": "Artificial Neural Networks (ANN) are inspired by how biological neurons in the human brain communicate. Just as neurons pass signals through synapses, artificial neurons pass weighted signals through layers."
+  },
+  {
+    "id": "NN-002",
+    "topic": "neural_networks",
+    "type": "MCQ",
+    "difficulty": "easy",
+    "question": "Which of the following is NOT a layer type in a basic Neural Network?",
+    "options": ["Input Layer", "Hidden Layer", "Output Layer", "Processing Layer"],
+    "answer": "Processing Layer",
+    "explanation": "A basic Neural Network has three layer types: Input Layer (receives features), Hidden Layer(s) (processes and transforms data), and Output Layer (produces final prediction). There is no 'Processing Layer' — that is not standard terminology."
+  },
+  {
+    "id": "NN-003",
+    "topic": "neural_networks",
+    "type": "MCQ",
+    "difficulty": "easy",
+    "question": "What is the role of an Activation Function in a Neural Network?",
+    "options": [
+      "To initialize weights",
+      "To introduce non-linearity so the network can learn complex patterns",
+      "To calculate the cost function",
+      "To split data into training and testing sets"
+    ],
+    "answer": "To introduce non-linearity so the network can learn complex patterns",
+    "explanation": "Without activation functions, a neural network would just be a linear equation no matter how many layers. Activation functions like ReLU, Sigmoid, and Tanh add non-linearity, allowing the network to learn complex, non-linear patterns."
+  },
+  {
+    "id": "NN-004",
+    "topic": "neural_networks",
+    "type": "MCQ",
+    "difficulty": "medium",
+    "question": "What is the ReLU activation function formula?",
+    "options": ["f(x) = 1/(1+e^-x)", "f(x) = max(0, x)", "f(x) = (e^x - e^-x)/(e^x + e^-x)", "f(x) = x²"],
+    "answer": "f(x) = max(0, x)",
+    "explanation": "ReLU (Rectified Linear Unit) = max(0, x). It outputs x if x > 0, and 0 if x ≤ 0. ReLU is the most commonly used activation function in hidden layers because it is computationally efficient and avoids the vanishing gradient problem."
+  },
+  {
+    "id": "NN-005",
+    "topic": "neural_networks",
+    "type": "MCQ",
+    "difficulty": "medium",
+    "question": "What is Backpropagation in Neural Networks?",
+    "options": [
+      "Forward pass of data through all layers",
+      "Algorithm to update weights by propagating error backwards from output to input",
+      "Process of initializing weights randomly",
+      "Method to add more hidden layers"
+    ],
+    "answer": "Algorithm to update weights by propagating error backwards from output to input",
+    "explanation": "Backpropagation calculates the gradient of the loss function with respect to each weight using the chain rule. These gradients are then used by Gradient Descent to update weights — this is how the neural network learns."
+  },
+  {
+    "id": "NN-006",
+    "topic": "neural_networks",
+    "type": "MCQ",
+    "difficulty": "medium",
+    "question": "What is a Convolutional Neural Network (CNN) primarily used for?",
+    "options": ["Text generation", "Image and spatial data processing", "Time series prediction only", "Clustering unlabelled data"],
+    "answer": "Image and spatial data processing",
+    "explanation": "CNNs use convolutional layers to automatically detect features in images — edges, shapes, textures. They are the standard choice for medical image analysis, X-ray classification, tumour detection, and any task involving image data."
+  },
+  {
+    "id": "NN-007",
+    "topic": "neural_networks",
+    "type": "MCQ",
+    "difficulty": "medium",
+    "question": "What problem does the Dropout regularization technique solve?",
+    "options": ["Underfitting", "Overfitting", "Slow convergence", "Missing data"],
+    "answer": "Overfitting",
+    "explanation": "Dropout randomly deactivates a fraction of neurons during each training iteration. This prevents the network from becoming over-reliant on any specific neurons, forcing it to learn more robust features and reducing overfitting."
+  },
+  {
+    "id": "NN-008",
+    "topic": "neural_networks",
+    "type": "MCQ",
+    "difficulty": "hard",
+    "question": "What is the Vanishing Gradient problem?",
+    "options": [
+      "When gradients become too large during backpropagation",
+      "When gradients become extremely small during backpropagation, making early layers learn very slowly",
+      "When the model fails to converge at all",
+      "When weights are initialized to zero"
+    ],
+    "answer": "When gradients become extremely small during backpropagation, making early layers learn very slowly",
+    "explanation": "In deep networks with sigmoid/tanh activations, gradients are multiplied repeatedly during backpropagation and become tiny near input layers. Early layers barely update their weights. ReLU and batch normalization help solve this."
+  },
+  {
+    "id": "NN-009",
+    "topic": "neural_networks",
+    "type": "MCQ",
+    "difficulty": "hard",
+    "question": "In CNN architecture, what does a Pooling Layer do?",
+    "options": [
+      "Adds more features to the feature map",
+      "Reduces the spatial dimensions of the feature map while retaining important features",
+      "Applies activation functions to neurons",
+      "Connects all neurons in one layer to all neurons in the next"
+    ],
+    "answer": "Reduces the spatial dimensions of the feature map while retaining important features",
+    "explanation": "Pooling (Max Pooling or Average Pooling) reduces the width and height of feature maps, lowering computational cost and controlling overfitting. Max Pooling takes the maximum value in each window, preserving the most prominent features."
+  },
+  {
+    "id": "NN-010",
+    "topic": "neural_networks",
+    "type": "MCQ",
+    "difficulty": "hard",
+    "question": "What is the difference between a shallow neural network and a deep neural network?",
+    "options": [
+      "Shallow has 1 hidden layer; Deep has 2 or more hidden layers",
+      "Shallow uses ReLU; Deep uses Sigmoid",
+      "Shallow is for regression; Deep is for classification",
+      "Shallow trains faster always; Deep trains slower always"
+    ],
+    "answer": "Shallow has 1 hidden layer; Deep has 2 or more hidden layers",
+    "explanation": "Deep Learning refers to neural networks with multiple hidden layers (deep architecture). More layers allow learning increasingly abstract representations — from edges to shapes to objects in image recognition tasks."
+  },
+  {
+    "id": "NN-011",
+    "topic": "neural_networks",
+    "type": "TrueFalse",
+    "difficulty": "easy",
+    "question": "A Neural Network with zero hidden layers is equivalent to Logistic Regression.",
+    "answer": "True",
+    "explanation": "A neural network with no hidden layers and a sigmoid activation on the output node is mathematically equivalent to Logistic Regression. Hidden layers are what give neural networks their extra power."
+  },
+  {
+    "id": "NN-012",
+    "topic": "neural_networks",
+    "type": "TrueFalse",
+    "difficulty": "medium",
+    "question": "Increasing the number of layers always improves a Neural Network's performance.",
+    "answer": "False",
+    "explanation": "More layers can lead to overfitting, vanishing gradients, and slower training without better accuracy. The right depth depends on the problem and data size. Regularization, proper initialization, and early stopping help manage depth."
+  },
+  {
+    "id": "NN-013",
+    "topic": "neural_networks",
+    "type": "TrueFalse",
+    "difficulty": "medium",
+    "question": "CNNs are the standard architecture for medical image classification tasks.",
+    "answer": "True",
+    "explanation": "CNNs automatically learn spatial features from images through convolution operations. They are used in chest X-ray classification, tumour detection, retinal disease diagnosis, and skin lesion classification with state-of-the-art accuracy."
+  },
+  {
+    "id": "NN-014",
+    "topic": "neural_networks",
+    "type": "TrueFalse",
+    "difficulty": "hard",
+    "question": "Batch Normalization speeds up training by normalizing inputs to each layer.",
+    "answer": "True",
+    "explanation": "Batch Normalization normalizes the inputs of each layer to have mean=0 and variance=1 within each mini-batch. This reduces internal covariate shift, allows higher learning rates, and acts as a form of regularization."
+  },
+  {
+    "id": "NN-015",
+    "topic": "neural_networks",
+    "type": "ShortAnswer",
+    "difficulty": "easy",
+    "question": "Explain how a Neural Network learns with a simple analogy.",
+    "answer": "Analogy: A Neural Network learns like a student studying for an exam. Step 1 — Forward Pass: The student reads the question and gives an answer (prediction). Step 2 — Calculate Error: The teacher marks the answer as right or wrong (loss function calculates error). Step 3 — Backpropagation: The student understands which concepts they got wrong (gradient flows backwards). Step 4 — Weight Update: The student studies those concepts harder (weights adjusted using Gradient Descent). Step 5 — Repeat: After many practice questions (epochs), the student improves. The neural network repeats this cycle for thousands of training examples until it learns.",
+    "explanation": "This forward-backward learning cycle is called an epoch. Multiple epochs on the training data gradually reduce the error."
+  },
+  {
+    "id": "NN-016",
+    "topic": "neural_networks",
+    "type": "ShortAnswer",
+    "difficulty": "medium",
+    "question": "What are the main components of a CNN architecture? Explain each briefly.",
+    "answer": "CNN Architecture Components: 1) Input Layer — Receives the raw image as a matrix of pixel values (e.g., 64×64×3 for colour image). 2) Convolutional Layer — Applies filters/kernels to detect features (edges, corners, textures). Each filter produces a feature map. 3) Activation (ReLU) — Applies non-linearity. Negative values become 0. 4) Pooling Layer — Reduces spatial dimensions (Max Pooling takes maximum value in each window). Reduces computation. 5) Flatten — Converts 2D feature maps into a 1D vector for the classifier. 6) Fully Connected Layer — Dense layer that combines all features. 7) Output Layer — Final classification (e.g., Softmax for multi-class, Sigmoid for binary).",
+    "explanation": "Understanding CNN architecture is essential for medical imaging tasks like X-ray diagnosis and tumour detection."
+  },
+  {
+    "id": "NN-017",
+    "topic": "neural_networks",
+    "type": "ShortAnswer",
+    "difficulty": "hard",
+    "question": "Explain Transfer Learning and why it is especially useful in biomedical AI.",
+    "answer": "Transfer Learning uses a pre-trained neural network (trained on millions of images) and fine-tunes it on a smaller domain-specific dataset. Why useful in biomedical AI: 1) Limited labelled medical data — collecting and annotating medical images is expensive and slow. Transfer learning works well even with only 500-1000 images. 2) Pre-trained features generalize — features learned from natural images (edges, textures) transfer well to medical images. 3) Faster training — fine-tuning takes hours instead of weeks. Example: VGG16 or ResNet trained on ImageNet used for chest X-ray classification. Freeze early layers (general features), retrain final layers (disease-specific features). My research: CNN-based posture detection applies similar transfer learning principles.",
+    "explanation": "Transfer learning is why modern medical AI systems can be built with relatively small datasets."
+  },
+  {
+    "id": "NN-018",
+    "topic": "neural_networks",
+    "type": "MCQ",
+    "difficulty": "easy",
+    "question": "What activation function is used in the output layer for binary classification?",
+    "options": ["ReLU", "Sigmoid", "Softmax", "Tanh"],
+    "answer": "Sigmoid",
+    "explanation": "Sigmoid outputs a value between 0 and 1, which is interpreted as a probability for binary classification (YES/NO, Disease/Healthy). For multi-class classification, Softmax is used instead."
+  },
+  {
+    "id": "NN-019",
+    "topic": "neural_networks",
+    "type": "MCQ",
+    "difficulty": "medium",
+    "question": "What is an Epoch in Neural Network training?",
+    "options": [
+      "One single weight update",
+      "One complete pass through the entire training dataset",
+      "One layer of the neural network",
+      "One batch of training samples"
+    ],
+    "answer": "One complete pass through the entire training dataset",
+    "explanation": "An epoch is when the neural network has seen every training sample once. Training typically requires many epochs (50, 100, 500+) until the model converges. More epochs = more learning, but too many = overfitting."
+  },
+  {
+    "id": "NN-020",
+    "topic": "neural_networks",
+    "type": "ShortAnswer",
+    "difficulty": "hard",
+    "question": "How does a CNN detect diseases in medical images? Explain with reference to chest X-ray analysis.",
+    "answer": "CNN for Chest X-ray Disease Detection: 1) Input — Chest X-ray image (e.g., 224×224 pixels) fed as a matrix. 2) First Convolution Layers — Detect low-level features: edges, bone outlines, tissue boundaries. 3) Middle Layers — Detect medium-level features: rib shapes, heart contour, lung boundary patterns. 4) Deep Layers — Detect high-level features: consolidation patterns (pneumonia), nodules (tumour), effusion signs. 5) Fully Connected — Combines all features. 6) Output — Probability scores: Normal=0.12, Pneumonia=0.78, COVID-19=0.10. 7) Prediction — Pneumonia (highest probability). Clinical validation step follows before clinical use. This is the basis of my published research applying CNNs for medical pattern detection.",
+    "explanation": "Each layer of CNN learns increasingly complex features automatically — no manual feature engineering needed, unlike traditional image processing."
+  }
+]
