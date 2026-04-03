@@ -118,8 +118,8 @@ We welcome contributions! Add questions from your domain:
 ## 👤 Author
 
 **C. Sathish Kumar**
-Assistant Professor, Biomedical Engineering | IEEE Researcher | QIP Certified (NIT Puducherry)
-📧 csathishkumar08@gmail.com
+Assistant Professor, Biomedical Engineering | IEEE Researcher | QIP Certified
+
 
 ---
 
